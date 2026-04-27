@@ -28,3 +28,12 @@ total_pence = sum_balances(balances)
 total_string = format_pence_as_str(total_pence)
 
 print(f"The bank accounts total {total_string}")
+
+
+
+#     ✍️exercise
+# Do not run the following code.
+
+# This code contains bugs related to types. They are bugs mypy can catch.
+
+# Read this code to understand what it’s trying to do. Add type annotations to the method parameters and return types of this code. Run the code through mypy, and fix all of the bugs that show up. When you’re confident all of the type annotations are correct, and the bugs are fixed, run the code and check it works.
