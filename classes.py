@@ -11,3 +11,11 @@ print(imran.address)
 eliza = Person("Eliza", 34, "Arch Linux")
 print(eliza.name)
 print(eliza.address)
+
+
+# Exercise
+# Add the is_adult code to the file you saved earlier.
+
+# Run it through mypy - notice that no errors are reported - mypy understands that Person has a property named age so is happy with the function.
+
+# Write a new function in the file that accepts a Person as a parameter and tries to access a property that doesn’t exist. Run it through mypy and check that it does report an error.
