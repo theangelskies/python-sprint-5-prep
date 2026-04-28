@@ -29,6 +29,7 @@ print(person1.get_full_name())
 # prediction: Elizaveta Alekseeva prints the same, get full name returns first and last name as there are no previous last names.
 person1.change_last_name("Tyurina")
 print(person1.get_name())
+# prediction: Elizaveta Tyurina prints the new last name, get name returns first and new last name.
 print(person1.get_full_name())
 
 person2 = Parent("Elizaveta", "Alekseeva")
