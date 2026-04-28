@@ -1,7 +1,7 @@
-def open_account(balances, name, amount):
+def open_account(balances: dict, name: str, amount: int):
     balances[name] = amount
 
-def sum_balances(accounts):
+def sum_balances(accounts: dict[str, int]) -> int:
     total = 0
     for name, pence in accounts.items():
         print(f"{name} had balance {pence}")
