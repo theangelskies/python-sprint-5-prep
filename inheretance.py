@@ -43,6 +43,7 @@ print(person2.get_full_name())
 person2.change_last_name("Tyurina")
 print(person2.get_name())
 print(person2.get_full_name())
+# prediction: failed because parent doesn't have change_last_name method prints error message: 'Parent' object has no attribute 'change_last_name'
 
 # ✍️exercise
 # Play computer with this code. Predict what you expect each line will do. Then run the code and check your predictions. (If any lines cause errors, you may need to comment them out to check later lines).
