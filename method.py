@@ -1,13 +1,23 @@
+import datetime
+
 class Person:
-    def __init__(self, name: str, age: int, preferred_operating_system: str):
+    def __init__(self, name: str, date_of_birth: datetime.date, preferred_operating_system: str):
         self.name = name
-        self.age = age
+        self.date_of_birth = date_of_birth
         self.preferred_operating_system = preferred_operating_system
 
-    def is_adult(self):
-        return self.age >= 18
+    def is_adult(self) -> bool:
+        today = datetime.date.today()
 
-imran = Person("Imran", 22, "Ubuntu")
+        age = today.year - self.date_of_birth.year
+
+        if (today.month, today.day) < (self.date_of_birth.month, self.date_of_birth.day):
+            age -= 1
+
+        return age >= 18
+
+
+imran = Person("Imran", datetime.date(2004, 6, 10), "Ubuntu")
 print(imran.is_adult())
 
 # ✍️exercise
