@@ -1,3 +1,6 @@
+from attrs import has
+
+
 class Parent:
     def __init__(self, first_name: str, last_name: str):
         self.first_name = first_name
@@ -24,17 +27,23 @@ class Child(Parent):
 
 person1 = Child("Elizaveta", "Alekseeva")
 print(person1.get_name())
+# prediction: Elizaveta Alekseeva prints the same, get name returns first and last name.
 print(person1.get_full_name()) 
+# prediction: Elizaveta Alekseeva prints the same, get full name returns first and last name as there are no previous last names.
 person1.change_last_name("Tyurina")
 print(person1.get_name())
+# prediction: Elizaveta Tyurina prints the new last name, get name returns first and new last name.
 print(person1.get_full_name())
-
+# prediction: Elizaveta Alekseeva, get name returns first and last name. prints Elizaveta Tyurina (née Alekseeva)
 person2 = Parent("Elizaveta", "Alekseeva")
 print(person2.get_name())
+# prediction: Elizaveta Alekseeva prints the same, get name returns first and last name.
 print(person2.get_full_name())
+# prediction: failed because parent doesn't have get_full_name method prints error message: 'Parent' object has no attribute 'get_full_name'
 person2.change_last_name("Tyurina")
 print(person2.get_name())
 print(person2.get_full_name())
+# prediction: failed because parent doesn't have change_last_name method prints error message: 'Parent' object has no attribute 'change_last_name'
 
 # ✍️exercise
 # Play computer with this code. Predict what you expect each line will do. Then run the code and check your predictions. (If any lines cause errors, you may need to comment them out to check later lines).

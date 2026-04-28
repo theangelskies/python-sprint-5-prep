@@ -6,11 +6,16 @@ class Person:
 
 imran = Person("Imran", 22, "Ubuntu")
 print(imran.name)
-print(imran.address)
+# print(imran.address) - Bug address does not exist in the Person class
 
 eliza = Person("Eliza", 34, "Arch Linux")
 print(eliza.name)
-print(eliza.address)
+# print(eliza.address)  - Bug address does not exist in the Person class
+
+def is_adult(person: Person) -> bool:
+    return person.age >= 18
+
+print(is_adult(imran))
 
 
 # Exercise
@@ -19,3 +24,7 @@ print(eliza.address)
 # Run it through mypy - notice that no errors are reported - mypy understands that Person has a property named age so is happy with the function.
 
 # Write a new function in the file that accepts a Person as a parameter and tries to access a property that doesn’t exist. Run it through mypy and check that it does report an error.
+def print_address(person: Person) -> None:
+    print(person.address)
+
+    # bug: Person has no attribute 'address' - mypy will report this error when we run it.
