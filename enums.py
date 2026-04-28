@@ -43,7 +43,7 @@ laptops = [
     Laptop(id=3, manufacturer="Dell", model="XPS", screen_size_in_inches=15, operating_system=OperatingSystem.UBUNTU),
     Laptop(id=4, manufacturer="Apple", model="macBook", screen_size_in_inches=13, operating_system=OperatingSystem.MACOS),
 ]
-print("Welcome to Laptop Library!")
+print("Welcome to Laptop Library")
 print(f"Available operating systems: {', '.join(os.value for os in OperatingSystem)}")
 
 def parse_operating_system(user_input: str) -> OperatingSystem:
