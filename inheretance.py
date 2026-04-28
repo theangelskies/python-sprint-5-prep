@@ -26,6 +26,7 @@ person1 = Child("Elizaveta", "Alekseeva")
 print(person1.get_name())
 # prediction: Elizaveta Alekseeva prints the same, get name returns first and last name.
 print(person1.get_full_name()) 
+# prediction: Elizaveta Alekseeva prints the same, get full name returns first and last name as there are no previous last names.
 person1.change_last_name("Tyurina")
 print(person1.get_name())
 print(person1.get_full_name())
