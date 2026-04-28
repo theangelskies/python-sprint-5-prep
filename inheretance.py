@@ -34,6 +34,7 @@ print(person1.get_full_name())
 # prediction: Elizaveta Alekseeva, get name returns first and last name. prints Elizaveta Tyurina (née Alekseeva)
 person2 = Parent("Elizaveta", "Alekseeva")
 print(person2.get_name())
+# prediction: Elizaveta Alekseeva prints the same, get name returns first and last name.
 print(person2.get_full_name())
 person2.change_last_name("Tyurina")
 print(person2.get_name())
