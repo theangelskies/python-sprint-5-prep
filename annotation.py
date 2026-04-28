@@ -37,3 +37,8 @@ print(f"The bank accounts total {total_string}")
 # This code contains bugs related to types. They are bugs mypy can catch.
 
 # Read this code to understand what it’s trying to do. Add type annotations to the method parameters and return types of this code. Run the code through mypy, and fix all of the bugs that show up. When you’re confident all of the type annotations are correct, and the bugs are fixed, run the code and check it works.
+
+# Bugs found:
+# 1. open_account("Tobi", 9.13)    — missing `balances` argument, amount is float not int
+# 2. open_account("Olya", "£7.13") — missing `balances` argument, amount is str not int
+# 3. format_pence_as_str()          — wrong name, should be format_pence_as_string()
