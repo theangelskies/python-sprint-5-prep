@@ -1,3 +1,6 @@
+from attrs import has
+
+
 class Parent:
     def __init__(self, first_name: str, last_name: str):
         self.first_name = first_name
@@ -36,6 +39,7 @@ person2 = Parent("Elizaveta", "Alekseeva")
 print(person2.get_name())
 # prediction: Elizaveta Alekseeva prints the same, get name returns first and last name.
 print(person2.get_full_name())
+# prediction: failed because parent doesn't have get_full_name method prints error message: 'Parent' object has no attribute 'get_full_name'
 person2.change_last_name("Tyurina")
 print(person2.get_name())
 print(person2.get_full_name())
