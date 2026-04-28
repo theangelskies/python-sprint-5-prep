@@ -25,7 +25,7 @@ open_account("Tobi", 9.13)
 open_account("Olya", "£7.13")
 
 total_pence = sum_balances(balances)
-total_string = format_pence_as_str(total_pence)
+total_string = format_pence_as_string(total_pence)
 
 print(f"The bank accounts total {total_string}")
 
